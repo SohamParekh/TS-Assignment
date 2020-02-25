@@ -1,0 +1,83 @@
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Assignment of TypeScrirpt</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <div class="navbar-brand">Assignment - TS</div>
+        <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search by school name" id="seachbyschoolname"
+                name="schoolname" size="22" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" id="search" type="submit">Search</button>
+        </div>
+    </nav>
+
+    <div class="form-horizontal" id="nameform">
+        <div class="form-group">
+            <label for="studentname" class="col-sm-2 control-label">Student Name</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control " id="studentname" size="20" placeholder="Student Name"
+                    required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="age" class="col-sm-2 control-label">Student Age</label>
+            <div class="col-sm-2">
+                <input type="number" class="form-control" id="age" size="20" placeholder="Student Age" required />
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="studentclass" class="col-sm-2 control-label">Student Class</label>
+            <div class="col-sm-2">
+                <input type="number" class="form-control" id="studentclass" size="20" placeholder="Student Class"
+                    required />
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="studfavsub" class="col-sm-2 control-label">Student Favourite Subject</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="studfavsub" size="20"
+                    placeholder="Student Favourite Subject" required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="schoolname" class="col-sm-2 control-label">Name of School</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="schoolname" size="20" placeholder="School Name" required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button class="btn btn-primary" id="addstudent">Add Student</button>
+                <button class="btn btn-success" id="calculate" >Students List</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-horizontal" id="game"></div>
+
+    <div class="col-sm-offset-2 col-sm-10" id="scores">
+
+    </div>
+
+    <!-- add script tags here -->
+    <script src="bundle.js"></script>
+
+</body>
+
+</html>
