@@ -42,14 +42,14 @@ document.getElementById('addstudent')!.addEventListener('click', () => {
     document.getElementById('search')!.addEventListener('click', ()=>{
         var searchbysn = Helpers.getValue('seachbyschoolname'); 
        // console.log(searchbysn);
-       let output: string = `<h2>Student-List from ${searchbysn}</h2>`;
+       let output: string = `<h2>Student-List from ${searchbysn} School</h2>`;
          //console.log(values)
          
         for (let index = 0; index < sp.length; index++) {
-            var name=sp[index];
-          if(searchbysn===String(name.schoolname)){
+            var nameofschool=sp[index];
+          if(searchbysn===String(nameofschool.schoolname)){
             output += '<h4>';
-            output += " Name: " +name.name + ' Age : ' + name.age + " Class: " + name.stud_class  + " Favourite Subject: " + name.favourite_subject  + " School: " + name.schoolname;
+            output += " Name: " +nameofschool.name + ' Age : ' + nameofschool.age + " Class: " + nameofschool.stud_class  + " Favourite Subject: " + nameofschool.favourite_subject  + " School: " + nameofschool.schoolname;
             output += '</h4>';
             const scoresElement: HTMLElement = document.getElementById('scores')!;
             scoresElement.innerHTML = output;
