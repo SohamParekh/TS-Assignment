@@ -25,21 +25,21 @@ document.getElementById('addstudent')!.addEventListener('click', () => {
 
     if (new_stud.name == "" || new_stud.age == null || new_stud.stud_class == null || new_stud.favourite_subject == "" || new_stud.schoolname == "") {
 
-        alert("please fill all fields");
+        alert("Please fill all the fields!!");
         return false;
     }
     else if (regex.test(new_stud.name) == false) {
 
-        alert("Name can contain only alphabets and space");
+        alert("Name contains only alphabets and space");
         return false;
     }
     else if (regex1.test(String(new_stud.age)) == null || (new_stud.age < 2 && new_stud.age > 16)  ) {
 
-        alert("invalid ageee");
+        alert("Invalid Age!");
         return false;
     }
     else if (regex.test(new_stud.schoolname) == false) {
-        alert("enter valid school name");
+        alert("Enter valid School Name");
         return false;
     }
     else if (new_stud.stud_class > 12) {
