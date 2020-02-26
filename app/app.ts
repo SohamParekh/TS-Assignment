@@ -12,14 +12,49 @@ var sp:school[] = [
 ] ;
 var new_stud:school;
 document.getElementById('addstudent')!.addEventListener('click', () => {
-    new_stud = new school();
+  new_stud = new school();
     new_stud.name = Helpers.getValue('studentname');
     new_stud.age = Number(Helpers.getValue('age'));
     new_stud.stud_class = Number(Helpers.getValue('studentclass'));
     new_stud.favourite_subject = Helpers.getValue('studfavsub');
     new_stud.schoolname = Helpers.getValue('schoolname');
+  function validate() {
+
+    var regex = /^[a-zA-Z. ]{2,30}$/;
+    var regex1 = /^[-9]{1,2}$/;
+
+    if (new_stud.name == "" || new_stud.age == null || new_stud.stud_class == null || new_stud.favourite_subject == "" || new_stud.schoolname == "") {
+
+        alert("please fill all fields");
+        return false;
+    }
+    else if (regex.test(new_stud.name) == false) {
+
+        alert("Name can contain only alphabets and space");
+        return false;
+    }
+    else if (regex1.test(String(new_stud.age)) == null || (new_stud.age < 2 && new_stud.age > 16)  ) {
+
+        alert("invalid ageee");
+        return false;
+    }
+    else if (regex.test(new_stud.schoolname) == false) {
+        alert("enter valid school name");
+        return false;
+    }
+    else if (new_stud.stud_class > 12) {
+      alert("Enter valid Class of Student");
+      return false;
+  }
+    else {
+        return true;
+    }
+}
+if(validate() === true){
+    
     console.log(sp);
     sp.push(new_stud);
+}
     //var key:string = "Item 1";
     //localStorage.setItem(key,JSON.stringify(new_stud));
    });
